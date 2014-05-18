@@ -1,0 +1,9 @@
+---
+- name: Install foreman services
+  sudo: yes
+  shell: bundle exec foreman export upstart /etc/init --port {{port}} --user {{user}} --app {{application}}
+         chdir="/home/{{user}}/applications/{{application}}/current"
+
+- name: Start foreman services
+  sudo: yes
+  service: name={{application}} enabled=yes state=started
