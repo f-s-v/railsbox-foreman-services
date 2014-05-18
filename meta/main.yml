@@ -5,4 +5,5 @@ galaxy_info:
   license: BSD
   min_ansible_version: 1.6
   categories:
-  - system
+    - system
+dependencies: []
