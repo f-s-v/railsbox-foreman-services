@@ -2,7 +2,7 @@
 - name: Install foreman services
   sudo: yes
   shell: bundle exec foreman export upstart /etc/init --port {{railsbox_port}} --user {{railsbox_user}} --app {{railsbox_application}}
-         chdir="/home/{{user}}/applications/{{railsbox_application}}/current"
+         chdir="/home/{{railsbox_user}}/applications/{{railsbox_application}}/current"
 
 - name: Start foreman services
   sudo: yes
